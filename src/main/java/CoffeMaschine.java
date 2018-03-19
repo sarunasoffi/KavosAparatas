@@ -82,19 +82,19 @@ public class CoffeMaschine {
             System.out.println("Išvalyta");
         }
         System.out.println("Produktų būsenos:");
-        if (_beans >= 0) {
+        if (_beans > 0) {
             System.out.println("+ Pupelės");
         } else {
             System.out.println("- Pupelės");
         }
 
-        if (_sugar >= 0) {
+        if (_sugar > 0) {
             System.out.println("+ Cukrus");
         } else {
             System.out.println("- Cukrus");
         }
 
-        if (_water >= 0) {
+        if (_water > 0) {
             System.out.println("+ Vanduo");
         } else {
             System.out.println("- Vanduo");
@@ -175,11 +175,11 @@ public class CoffeMaschine {
         }
         if (water > _water) {
             result = true;
-            System.out.println("Trūksta pupelių");
+            System.out.println("Trūksta vandens");
         }
         if (sugar > _sugar) {
             result = true;
-            System.out.println("Trūksta pupelių");
+            System.out.println("Trūksta cukraus");
         }
         return result;
     }
