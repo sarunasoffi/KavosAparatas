@@ -1,57 +1,27 @@
+import org.omg.CORBA.BAD_POLICY;
 
-public class CoffeMaschine {
+public class CoffeMachine {
 
     public static final int MAX_USES = 5;
-    private float _sugar;
-    private float _beans;
-    private float _water;
+    private ProductsVO _products;
     private int _uses;
 
 
-    public CoffeMaschine() {
+    public CoffeMachine() {
     }
 
 
-    public CoffeMaschine(float sugar, float beans, float water) {
-        _sugar = sugar;
-        _beans = beans;
-        _water = water;
+    public CoffeMachine(ProductsVO value) {
+       this._products=value;
     }
 
 
-    public float getSugar() {
-        return _sugar;
-    }
 
 
-    public float getWater() {
-        return _water;
-    }
-
-
-    public float getBeans() {
-        return _beans;
-    }
-
-
-    public void setSugar(float value) {
-        _sugar = value;
-    }
-
-
-    public void setWater(float value) {
-        _water = value;
-    }
-
-
-    public void setBeans(float value) {
-        _beans = value;
-    }
-
-    public void addProducts(float beans, float water, float sugar) {
-        _water += water;
-        _sugar += sugar;
-        _beans += beans;
+    public void addProducts(ProductsVO value) {
+       this._products.setBeans(this._products.getBeans()+value.getBeans());
+       this._products.setWater(this._products.getWater()+value.getWater());
+       this._products.setSugar(this._products.getSugar()+value.getSugar());
     }
 
 
@@ -82,19 +52,19 @@ public class CoffeMaschine {
             System.out.println("Išvalyta");
         }
         System.out.println("Produktų būsenos:");
-        if (_beans > 0) {
+        if (_products.getBeans() > 0) {
             System.out.println("+ Pupelės");
         } else {
             System.out.println("- Pupelės");
         }
 
-        if (_sugar > 0) {
+        if (_products.getSugar() > 0) {
             System.out.println("+ Cukrus");
         } else {
             System.out.println("- Cukrus");
         }
 
-        if (_water > 0) {
+        if (_products.getWater() > 0) {
             System.out.println("+ Vanduo");
         } else {
             System.out.println("- Vanduo");
@@ -103,9 +73,9 @@ public class CoffeMaschine {
 
 
     public void showProducts() {
-        System.out.println("Pupelės: " + _beans);
-        System.out.println("Cukrus: " + _sugar);
-        System.out.println("Vanduo: " + _water);
+        System.out.println("Pupelės: " + _products.getBeans());
+        System.out.println("Cukrus: " + _products.getSugar());
+        System.out.println("Vanduo: " + _products.getWater());
     }
 
 
@@ -123,9 +93,9 @@ public class CoffeMaschine {
         float needsSugar = 5;
 
         if (!checkProducts(needsSugar, needsWater, needsBeans) && checkWashing()) {
-            _water -= needsWater;
-            _sugar -= needsSugar;
-            _beans -= needsBeans;
+            _products.setWater(_products.getWater()-  needsWater);
+            _products.setSugar(_products.getSugar()-needsSugar);
+            _products.setBeans(_products.getBeans()-needsBeans);
             _uses++;
             System.out.println("Padariau Latte");
         }
@@ -141,9 +111,9 @@ public class CoffeMaschine {
         float needsSugar = 10;
 
         if (!checkProducts(needsSugar, needsWater, needsBeans) && checkWashing()) {
-            _water -= needsWater;
-            _sugar -= needsSugar;
-            _beans -= needsBeans;
+            _products.setWater(_products.getWater()-  needsWater);
+            _products.setSugar(_products.getSugar()-needsSugar);
+            _products.setBeans(_products.getBeans()-needsBeans);
             _uses++;
             System.out.println("Padariau Juodą kavą");
         }
@@ -158,9 +128,9 @@ public class CoffeMaschine {
         float needsSugar = 5;
 
         if (!checkProducts(needsSugar, needsWater, needsBeans) && checkWashing()) {
-            _water -= needsWater;
-            _sugar -= needsSugar;
-            _beans -= needsBeans;
+            _products.setWater(_products.getWater()-  needsWater);
+            _products.setSugar(_products.getSugar()-needsSugar);
+            _products.setBeans(_products.getBeans()-needsBeans);
             _uses++;
             System.out.println("Padariau Esspresso");
         }
@@ -169,15 +139,15 @@ public class CoffeMaschine {
 
     private boolean checkProducts(float sugar, float water, float beans) {
         boolean result = false;
-        if (beans > _beans) {
+        if (beans > _products.getBeans()) {
             result = true;
             System.out.println("Trūksta pupelių");
         }
-        if (water > _water) {
+        if (water > _products.getWater()) {
             result = true;
             System.out.println("Trūksta vandens");
         }
-        if (sugar > _sugar) {
+        if (sugar > _products.getSugar()) {
             result = true;
             System.out.println("Trūksta cukraus");
         }
@@ -194,4 +164,11 @@ public class CoffeMaschine {
     }
 
 
+    public ProductsVO getProducts() {
+        return _products;
+    }
+
+    public void setProducts(ProductsVO _products) {
+        this._products = _products;
+    }
 }
