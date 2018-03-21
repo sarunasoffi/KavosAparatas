@@ -34,28 +34,23 @@ public class Main {
                     break;
                 case 2:
                     _service.assignMultipleProducts(_machines, _multipleProducts);
-                    System.out.println("Priskirti skirtingi produktai aparatams");
+
                     break;
                 case 3:
                     _service.assignSingleProduct(_machines, _singleProduct);
-                    System.out.println("Bendras produktu skaicius buvo priskirtas");
                     break;
                 case 4:
                     _service.washMashines(_machines);
-                    System.out.println("Aparatai buvo isplauti");
                     break;
                 case 5:
                     _service.dumpMachineProducts(_machines);
-                    System.out.println("Tu katik sunaikinai visus produktus, tu gal juokauji....");
                     break;
                 case 6:
                     System.out.println("Iveskite aparato numeri nuo 0 iki " + (_machines.size() - 1));
                     _currentMachine = sc.nextInt();
-                    System.out.println("Tu pasirinkai " + _currentMachine + " aparata.");
                     break;
                 case 7:
-                    _machines.get(_currentMachine).addProducts(new ProductsVO(100, 100, 100));
-                    System.out.println("Tu papildei " + _currentMachine + " aparata 100 produktais");
+                    _machines.get(_currentMachine).addProducts(new ProductsVO(10, 10, 10));
                     break;
                 case 8:
                     _machines.get(_currentMachine).makeCoffe("latte");
