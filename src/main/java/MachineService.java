@@ -1,20 +1,23 @@
+import interfaces.ICoffeMachine;
+import products.ProductsVO;
+
 import java.util.ArrayList;
 
 public class MachineService {
-    public ArrayList<CoffeMachine> createMachines(int n) {
-        ArrayList<CoffeMachine> result = new ArrayList<CoffeMachine>();
+    public ArrayList<ICoffeMachine> createMachines(int n) {
+        ArrayList<ICoffeMachine> result = new ArrayList<ICoffeMachine>();
         for (int i = 0; i < n; i++) {
             result.add(this.createMachine());
         }
         return result;
     }
 
-    public CoffeMachine createMachine() {
-        CoffeMachine result = new CoffeMachine();
+    public ICoffeMachine createMachine() {
+        ICoffeMachine result = new CoffeMachine();
         return result;
     }
 
-    public void washMashines(ArrayList<CoffeMachine> list) {
+    public void washMashines(ArrayList<ICoffeMachine> list) {
         for (int i = 0; i < list.size(); i++) {
             washMashine(list.get(i));
         }
@@ -25,7 +28,7 @@ public class MachineService {
     }
 
     public void dumpMachineProducts(ArrayList<CoffeMachine> list) {
-        ProductsVO dumpResult = new ProductsVO(0,0,0);
+        ProductsVO dumpResult = new ProductsVO(0,0,0, 0, 0);
 
         for (int i = 0; i < list.size(); i++) {
             CoffeMachine currentMachine = list.get(i);
@@ -50,7 +53,7 @@ public class MachineService {
     public void assignMultipleProducts(ArrayList<CoffeMachine> list, ArrayList<ProductsVO> products) {
 
         for (int i = 0; i < list.size(); i++) {
-            ProductsVO skirtingasProduktas = new ProductsVO(50,50,50);
+            ProductsVO skirtingasProduktas = new ProductsVO(50,50,50, 50, 50);
             products.add(skirtingasProduktas);
             list.get(i).setProducts(skirtingasProduktas);
         }

@@ -1,3 +1,8 @@
+package cups;
+
+import cups.CoffeeCup;
+import products.ProductsVO;
+
 public class CoffeeLatte extends CoffeeCup {
     public CoffeeLatte() {
         super.setName("Latte");
@@ -6,7 +11,9 @@ public class CoffeeLatte extends CoffeeCup {
         super.setProducts(new ProductsVO(
                         20,
                         240,
-                        20
+                        20,
+                20,
+                20
                 )
         );
         super.setPreparationDuration(4000);

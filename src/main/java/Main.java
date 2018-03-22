@@ -1,9 +1,12 @@
+import interfaces.ICoffeMachine;
+import products.ProductsVO;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     private int _currentMachine = -1;
-    private ArrayList<CoffeMachine> _machines = null;
+    private ArrayList<ICoffeMachine> _machines = null;
     private ArrayList<ProductsVO> _multipleProducts = null;
     private MachineService _service = null;
     private ProductsVO _singleProduct = null;
@@ -18,7 +21,7 @@ public class Main {
     public void run() {
         _multipleProducts = new ArrayList<ProductsVO>();
         _service = new MachineService();
-        _singleProduct = new ProductsVO(1000, 1000, 1000);
+        _singleProduct = new ProductsVO(1000, 1000, 1000, 1000, 1000);
         Scanner sc = new Scanner(System.in);
         while (true) {
             showMenu();
@@ -50,7 +53,7 @@ public class Main {
                     _currentMachine = sc.nextInt();
                     break;
                 case 7:
-                    _machines.get(_currentMachine).addProducts(new ProductsVO(10, 10, 10));
+                    _machines.get(_currentMachine).addProducts(new ProductsVO(10, 10, 10, 10, 10));
                     break;
                 case 8:
                     _machines.get(_currentMachine).makeCoffe("latte");

@@ -1,6 +1,12 @@
-import org.omg.CORBA.BAD_POLICY;
+import cups.CoffeeBlack;
+import cups.CoffeeCup;
+import cups.CoffeeEspresso;
+import cups.CoffeeLatte;
+import interfaces.ICoffeMachine;
+import interfaces.IProductsContainer;
+import products.ProductsVO;
 
-public class CoffeMachine {
+public class CoffeMachine implements IProductsContainer, ICoffeMachine {
 
     public static final int MAX_USES = 5;
     private ProductsVO _products;
@@ -15,14 +21,14 @@ public class CoffeMachine {
         this._products = value;
     }
 
-
+    @Override
     public void addProducts(ProductsVO value) {
         this._products.setBeans(this._products.getBeans() + value.getBeans());
         this._products.setWater(this._products.getWater() + value.getWater());
         this._products.setSugar(this._products.getSugar() + value.getSugar());
     }
 
-
+    @Override
     public void makeCoffe(String type) {
         switch (type.toLowerCase()) {
             case "latte":
@@ -38,7 +44,8 @@ public class CoffeMachine {
     }
 
 
-    public void cleanMaschine() {
+    @Override
+    public void cleanMachine() {
         _uses = 0;
     }
 
@@ -69,14 +76,16 @@ public class CoffeMachine {
         }
     }
 
-
+    @Override
     public void showProducts() {
         System.out.println("Pupelės: " + _products.getBeans());
         System.out.println("Cukrus: " + _products.getSugar());
         System.out.println("Vanduo: " + _products.getWater());
+        System.out.println("Pienas: " + _products.getMilk());
+        System.out.println("Sokoladas: " + _products.getChocolate());
     }
 
-
+    @Override
     public void showStatus() {
         showProducts();
         System.out.println("Iki plovimo liko: " + (MAX_USES - _uses));
