@@ -405,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521721916013</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'destytojo/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/CoffeeMachine.java&#10;#&#9;src/main/java/MachineService.java&#10;#&#9;src/main/java/Main.java&#10;#&#9;src/main/java/cups/CoffeeBlack.java&#10;#&#9;src/main/java/cups/CoffeeCup.java&#10;#&#9;src/main/java/cups/CoffeeEspresso.java&#10;#&#9;src/main/java/cups/CoffeeLatte.java&#10;#&#9;src/main/java/cups/Cup.java&#10;#&#9;src/main/java/interfaces/ICup.java&#10;#&#9;src/main/java/interfaces/IProductsContainer.java&#10;#&#9;src/main/java/products/ProductsVO.java">
+      <created>1521721954976</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521721954976</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
