@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1f57afa-83af-46c7-bc66-04ae01b4df3e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CoffeeMachine.java" afterPath="$PROJECT_DIR$/src/main/java/CoffeeMachine.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/ICoffeeMachine.java" afterPath="$PROJECT_DIR$/src/main/java/interfaces/ICoffeeMachine.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/MachineService.class" afterPath="$PROJECT_DIR$/target/classes/MachineService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
     </list>
@@ -401,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521721904425</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'destytojo/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/CoffeeMachine.java&#10;#&#9;src/main/java/MachineService.java&#10;#&#9;src/main/java/Main.java&#10;#&#9;src/main/java/cups/CoffeeBlack.java&#10;#&#9;src/main/java/cups/CoffeeCup.java&#10;#&#9;src/main/java/cups/CoffeeEspresso.java&#10;#&#9;src/main/java/cups/CoffeeLatte.java&#10;#&#9;src/main/java/cups/Cup.java&#10;#&#9;src/main/java/interfaces/ICup.java&#10;#&#9;src/main/java/interfaces/IProductsContainer.java&#10;#&#9;src/main/java/products/ProductsVO.java">
+      <created>1521721916013</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1521721916013</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
