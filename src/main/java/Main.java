@@ -1,13 +1,15 @@
-import interfaces.ICoffeMachine;
+import interfaces.ICoffeeMachine;
+import interfaces.IProductsContainer;
 import products.ProductsVO;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     private int _currentMachine = -1;
-    private ArrayList<ICoffeMachine> _machines = null;
-    private ArrayList<ProductsVO> _multipleProducts = null;
+    private List<ICoffeeMachine> _machines = null;
+    private List<ProductsVO> _multipleProducts = null;
     private MachineService _service = null;
     private ProductsVO _singleProduct = null;
 
@@ -56,13 +58,13 @@ public class Main {
                     _machines.get(_currentMachine).addProducts(new ProductsVO(10, 10, 10, 10, 10));
                     break;
                 case 8:
-                    _machines.get(_currentMachine).makeCoffe("latte");
+                    _machines.get(_currentMachine).makeCoffee("latte");
                     break;
                 case 9:
-                    _machines.get(_currentMachine).makeCoffe("black");
+                    _machines.get(_currentMachine).makeCoffee("black");
                     break;
                 case 10:
-                    _machines.get(_currentMachine).makeCoffe("espresso");
+                    _machines.get(_currentMachine).makeCoffee("espresso");
                     break;
                 case 11:
                     _machines.get(_currentMachine).showIsReady();

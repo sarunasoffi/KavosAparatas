@@ -3,11 +3,14 @@ package interfaces;
 import cups.CoffeeCup;
 import products.ProductsVO;
 
-public interface ICoffeMachine {
-
+public interface ICoffeeMachine {
     void addProducts(ProductsVO value);
-    void makeCoffe(String value);
+
+    void makeCoffee(String value);
+
     void cleanMachine();
+
     void showIsReady();
+
     void showStatus();
 }

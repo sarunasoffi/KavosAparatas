@@ -11,9 +11,7 @@ public class CoffeeEspresso extends CoffeeCup {
         super.setProducts(new ProductsVO(
                         10,
                         90,
-                        30,
-                20,
-                20
+                        30, 0, 0
                 )
         );
         super.setPreparationDuration(2000);

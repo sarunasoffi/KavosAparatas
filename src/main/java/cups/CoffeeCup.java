@@ -41,12 +41,12 @@ public class CoffeeCup extends Cup implements IProductsContainer {
         System.out.println("Cukrus: " + _products.getSugar());
         System.out.println("Vanduo: " + _products.getWater());
         System.out.println("Pienas: " + _products.getMilk());
-        System.out.println("Sokoladas: " + _products.getChocolate());
+        System.out.println("Šokoladas: " + _products.getChocolate());
     }
 
     @Override
     public String toString() {
-        return "Name: "+getName() + ", is ready: "+ getIsReady()+ ", beans: "+_products.getBeans()+", sugar: "+_products.getSugar()+", water: "+ _products.getWater();
+        return "Name: " + getName() + ", is ready: " + getIsReady() + ", beans: " + _products.getBeans() + ", sugar: " + _products.getSugar() + ", water: " + _products.getWater();
     }
 
     public int getPreparationDuration() {

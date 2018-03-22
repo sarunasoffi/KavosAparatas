@@ -2,7 +2,7 @@ package cups;
 
 import interfaces.ICup;
 
-public class Cup implements ICup{
+public class Cup implements ICup {
     private float _maxVolume;
 
     @Override
@@ -16,7 +16,9 @@ public class Cup implements ICup{
     }
 
     @Override
-    public void showCupInfo(){
-        System.out.println("Puodelio talpa yra: "+_maxVolume);
+    public void showCupInfo() {
+        System.out.println(
+                "Puodelio talpa yra: " + _maxVolume
+        );
     }
 }

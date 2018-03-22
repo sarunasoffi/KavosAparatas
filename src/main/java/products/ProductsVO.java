@@ -12,7 +12,7 @@ public class ProductsVO {
         this._water = water;
         this._beans = beans;
         this._milk = milk;
-        this._chocolate = milk;
+        this._chocolate = chocolate;
     }
 
     public float getSugar() {
@@ -38,6 +38,7 @@ public class ProductsVO {
     public void setBeans(float value) {
         this._beans = value;
     }
+
 
     public float getMilk() {
         return _milk;
