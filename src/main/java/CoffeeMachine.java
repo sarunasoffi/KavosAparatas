@@ -1,29 +1,35 @@
-import org.omg.CORBA.BAD_POLICY;
+import cups.CoffeeBlack;
+import cups.CoffeeCup;
+import cups.CoffeeEspresso;
+import cups.CoffeeLatte;
+import interfaces.ICoffeeMachine;
+import interfaces.IProductsContainer;
+import products.ProductsVO;
 
-public class CoffeMachine {
+public class CoffeeMachine implements IProductsContainer, ICoffeeMachine {
 
     public static final int MAX_USES = 5;
     private ProductsVO _products;
     private int _uses;
 
 
-    public CoffeMachine() {
+    public CoffeeMachine() {
     }
 
 
-    public CoffeMachine(ProductsVO value) {
+    public CoffeeMachine(ProductsVO value) {
         this._products = value;
     }
 
-
+    @Override
     public void addProducts(ProductsVO value) {
         this._products.setBeans(this._products.getBeans() + value.getBeans());
         this._products.setWater(this._products.getWater() + value.getWater());
         this._products.setSugar(this._products.getSugar() + value.getSugar());
     }
 
-
-    public void makeCoffe(String type) {
+    @Override
+    public void makeCoffee(String type) {
         switch (type.toLowerCase()) {
             case "latte":
                 makeCup(new CoffeeLatte());
@@ -37,12 +43,12 @@ public class CoffeMachine {
         }
     }
 
-
-    public void cleanMaschine() {
+    @Override
+    public void cleanMachine() {
         _uses = 0;
     }
 
-
+    @Override
     public void showIsReady() {
         if (_uses >= MAX_USES) {
             System.out.println("Neišvalyta");
@@ -69,14 +75,16 @@ public class CoffeMachine {
         }
     }
 
-
+    @Override
     public void showProducts() {
         System.out.println("Pupelės: " + _products.getBeans());
         System.out.println("Cukrus: " + _products.getSugar());
         System.out.println("Vanduo: " + _products.getWater());
+        System.out.println("Pienas: " + _products.getMilk());
+        System.out.println("Šokoladas: " + _products.getChocolate());
     }
 
-
+    @Override
     public void showStatus() {
         showProducts();
         System.out.println("Iki plovimo liko: " + (MAX_USES - _uses));
@@ -130,11 +138,12 @@ public class CoffeMachine {
         return result;
     }
 
-
+    @Override
     public ProductsVO getProducts() {
         return _products;
     }
 
+    @Override
     public void setProducts(ProductsVO _products) {
         this._products = _products;
     }
