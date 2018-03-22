@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1f57afa-83af-46c7-bc66-04ae01b4df3e" name="Default" comment="v 3.0">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cups/Cup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interfaces/ICoffeeMachine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interfaces/ICup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interfaces/IProductsContainer.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Cup.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CoffeMachine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ProductsVO.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CoffeMachine.java" afterPath="$PROJECT_DIR$/src/main/java/CoffeeMachine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CoffeeBlack.java" afterPath="$PROJECT_DIR$/src/main/java/cups/CoffeeBlack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CoffeeCup.java" afterPath="$PROJECT_DIR$/src/main/java/cups/CoffeeCup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CoffeeEspresso.java" afterPath="$PROJECT_DIR$/src/main/java/cups/CoffeeEspresso.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CoffeeLatte.java" afterPath="$PROJECT_DIR$/src/main/java/cups/CoffeeLatte.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ProductsVO.java" afterPath="$PROJECT_DIR$/src/main/java/products/ProductsVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MachineService.class" afterPath="$PROJECT_DIR$/target/classes/MachineService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+    <list default="true" id="a1f57afa-83af-46c7-bc66-04ae01b4df3e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UMLdiagrama.xmi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/MachineService.java" afterPath="$PROJECT_DIR$/src/main/java/MachineService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -418,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521633033624</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="v 4.0 interfaces">
+      <created>1521711611601</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521711611601</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -467,7 +458,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed errors" />
     <MESSAGE value="v 3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v 3.0" />
+    <MESSAGE value="v 4.0 interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 4.0 interfaces" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
