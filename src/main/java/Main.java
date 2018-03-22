@@ -36,6 +36,8 @@ public class Main {
                     System.out.println("Iveskite kiek aparatu sukurti");
                     int n = sc.nextInt();
                     _machines = _service.createMachines(n);
+                    CoffeeMachine.skaiciuotuvas(n);
+
                     break;
                 case 2:
                     _service.assignMultipleProducts(_machines, _multipleProducts);
@@ -92,7 +94,5 @@ public class Main {
         System.out.println("10 - daryti espresso su pasirinktu aparatu");
         System.out.println("11 - parodyti ar pasirinktas aparatas yra pasiruoses");
         System.out.println("12 - parodyti pasirinkto aparato busena");
-
-
     }
 }

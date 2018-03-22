@@ -1,6 +1,5 @@
 package interfaces;
 
-import cups.CoffeeCup;
 import products.ProductsVO;
 
 public interface ICoffeeMachine {

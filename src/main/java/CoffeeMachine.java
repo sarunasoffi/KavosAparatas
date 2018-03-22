@@ -11,6 +11,7 @@ public class CoffeeMachine implements IProductsContainer, ICoffeeMachine {
     public static final int MAX_USES = 5;
     private ProductsVO _products;
     private int _uses;
+    public static int skaiciuotiAparatus = 0;
 
 
     public CoffeeMachine() {
@@ -146,5 +147,10 @@ public class CoffeeMachine implements IProductsContainer, ICoffeeMachine {
     @Override
     public void setProducts(ProductsVO _products) {
         this._products = _products;
+    }
+
+    public static void skaiciuotuvas(int n) {
+        skaiciuotiAparatus = skaiciuotiAparatus + n;
+        System.out.println("Iš viso sukurta: " + skaiciuotiAparatus + " aparatų.");
     }
 }
